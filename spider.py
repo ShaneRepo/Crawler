@@ -44,9 +44,9 @@ class Spider:
     def gather_links(page_url):
         html_string = ''
         try:
-            responce = urlopen(page_url)
-            if responce.getheader('Content-Type') == 'text/html':
-                html_bytes = responce.read()
+            response = urlopen(page_url)
+            if response.getheader('Content-Type') == 'text/html':
+                html_bytes = response.read()
                 html_string = html_bytes.decode("utf-8")
             finder = LinkFinder(Spider.base_url, page_url)
             finder.feed(html_string)
@@ -54,3 +54,6 @@ class Spider:
             print('Error: cannot crawl page')
             return set()
         return finder.page_links()
+
+    @staticmethod
+    def add_links_to_queue(links):

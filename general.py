@@ -45,6 +45,7 @@ def file_to_set(file_name):
             results.add(line.replace('\n', ''))
     return results
 
+
 # iterate through a set, each item will be a newline in the file
 def set_to_file(links, file):
     delete_file_contents(file)
