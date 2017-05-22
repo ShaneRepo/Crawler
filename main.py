@@ -4,8 +4,8 @@ from spider import Spider
 from domain import *
 from general import *
 
-PROJECT_NAME = 'wikipedia_python'
-HOMEPAGE = 'https://en.wikipedia.org/wiki/Python_(programming_language)'
+PROJECT_NAME = 'QL'
+HOMEPAGE = 'https://quickenloanscareers.com/'
 DOMAIN_NAME = get_domain_name(HOMEPAGE)
 QUEUE_FILE = PROJECT_NAME + '/queue.txt'
 CRAWLED_FILE = PROJECT_NAME + '/crawled.txt'
